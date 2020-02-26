@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Yann.FANHA-DIAS/Desktop/RecetteTableau/main.c
+stdio.h
+-
+stdlib.h
+-
+Windows.h
+-
+
