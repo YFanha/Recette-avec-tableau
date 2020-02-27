@@ -69,7 +69,7 @@ void calculs(int recetteChoisie, int nbrPersonnes){
     float recettes[NBR_DE_RECETTE][NBR_D_INGREDIENTS] = RECETTE;
 
 
-    printf("\n\nLes ingédients nécessaires pour %d personnes sont :\n", nbrPersonnes);
+    printf("\nLes ingédients nécessaires pour %d personnes sont :", nbrPersonnes);
 
     //Calcule des ingredients et affichage un par un
     for (int i = 0; i <= NBR_D_INGREDIENTS - 1; i++){
@@ -83,7 +83,62 @@ void calculs(int recetteChoisie, int nbrPersonnes){
             affichage(i, qteIngredient);
         }
     }
-    printf("\n\nBonne dégustation.. !");
+    printf("\n\nBonne dégustation !");
+}
+
+/**
+ * \author Yann Fanha
+ * \date 25.02.2020
+ * \description Demande le nombre de personne qui mangeront la recette choisie
+*/
+int NombreDePersonnes(int recetteChoisie){
+    int nbrPersonnes;
+
+    switch(recetteChoisie){
+        case 1: printf("\nEntrez le nombre de personnes qui mangeront des crêpes classsiques :");
+            break;
+
+        case 2: printf("\nEntrez le nombre de personnes qui mangeront des crêpes à la bière :");
+            break;
+
+        case 3: printf("\nEntrez le nombre de personnes qui mangeront des crêpes légères :");
+            break;
+
+        case 4: printf("\nEntrez le nombre de personnes qui mangeront des gauffres :");
+            break;
+
+        case 5: printf("\nEntrez le nombre de personnes qui mangeront des pancakes :");
+            break;
+    }
+    scanf("%d", &nbrPersonnes);
+
+    return nbrPersonnes;
+}
+
+/**
+ * \author Yann Fanha
+ * \date 27.02.2020
+ * \description Affiche ce qu'a choisi l'utilisateur
+ * @param recetteChoisie
+*/
+void affichageDuChoix(int recetteChoisie){
+    switch(recetteChoisie){
+        case 1:
+            printf("\nVous avez choisi la recette des crêpes classiques\n");
+            break;
+        case 2:
+            printf("\nVous avez choisi la recette des crêpes à la bière\n");
+            break;
+        case 3:
+            printf("\nVous avez choisi la recette des crêpes légères\n");
+            break;
+        case 4:
+            printf("\nVous avez choisi la recette des gauffres\n");
+            break;
+        case 5:
+            printf("\nVous avez choisi la recette des pancakes\n");
+            break;
+    }
 }
 
 /**
@@ -94,8 +149,9 @@ void calculs(int recetteChoisie, int nbrPersonnes){
 int choix(){
     int recetteChoisie;
     do {
-
         system("cls");
+
+        printf("----CHANDELEUR 2 le retour----\n\n");
 
         //Demande de la recette
         printf("\nChoisissez la recette que vous souhaiteriez faire :");
@@ -112,35 +168,6 @@ int choix(){
     return recetteChoisie;
 }
 
-/**
- * \author Yann Fanha
- * \date 25.02.2020
- * \description Demande le nombre de personne qui mangeront la recette choisie
-*/
-int NombreDePersonnes(int recetteChoisie){
-    int nbrPersonnes;
-
-    switch(recetteChoisie){
-        case 1: printf("\nEntrez le nombre de personnes qui mangeront des crêpes classsiques :");
-                break;
-
-        case 2: printf("\nEntrez le nombre de personnes qui mangeront des crêpes à la bière :");
-                break;
-
-        case 3: printf("\nEntrez le nombre de personnes qui mangeront des crêpes légères :");
-                break;
-
-        case 4: printf("\nEntrez le nombre de personnes qui mangeront des gauffres :");
-                break;
-
-        case 5: printf("\nEntrez le nombre de personnes qui mangeront des pancakes :");
-                break;
-    }
-    scanf("%d", &nbrPersonnes);
-
-    return nbrPersonnes;
-}
-
 int main() {
     SetConsoleOutputCP(65001);
 
@@ -148,6 +175,9 @@ int main() {
 
     //Demander ce que veut faire l'user et recuperer son choix
     recetteChoisie = choix();
+
+    //afficher le choix de l'user
+    affichageDuChoix(recetteChoisie);
 
     //Demander le nombre de personnes qui mangent des crêpes
     nbrPersonnes = NombreDePersonnes(recetteChoisie);
