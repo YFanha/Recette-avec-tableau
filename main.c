@@ -4,18 +4,14 @@
  * \version 1.0
  * \date 25.02.2020
  * \descripition Programme qui indique et calcule les ingrédients en fonction de la recette choisi et du nombre de personnes
- * ***********************************************************************************************************************
- * \author Yann Fanha
- * \version 1.1
- * \date 26.02.2020
- * \description Ajout de la fonction "affichage"
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-
 #pragma execution_character_set("utf-8")
+
+
 #define RECETTE {{125,0.25,0,0,1.5,0.5,0.5,0}, {125,0.1875,0.0625,0,1.5,0.5,0.5,0},{125,0,0,0.25,1.5,0.5,0.5,0},{75,0.125,0,0,0.5,0.5,1,2.5},{62.5,0.075,0,0,0.5,0.25,0.75,2.5}}
 #define NBR_DE_RECETTE 5
 #define NBR_D_INGREDIENTS 8
@@ -60,8 +56,6 @@ void affichage(int i, float qteIngredient){
  * \author Yann Fanha
  * \date 25.02.2020
  * \description Effectue les calcules et appelle la fonction d'affichage
- * @param nbrRecettes
- * @param nbrIngredients
  * @param recetteChoisie
  * @param nbrPersonnes
  */
@@ -71,11 +65,11 @@ void calculs(int recetteChoisie, int nbrPersonnes){
     //Pour trouver la bonner recette dans le tableau (tableau commence de 0)
     recetteChoisie = recetteChoisie-1;
 
-    //Déclaration du tableau "recettes" avec le nombre de recette et le nombre d'ingredients
+
     float recettes[NBR_DE_RECETTE][NBR_D_INGREDIENTS] = RECETTE;
 
 
-    printf("Les ingédients nécessaires pour %d personnes sont :\n", nbrPersonnes);
+    printf("\n\nLes ingédients nécessaires pour %d personnes sont :\n", nbrPersonnes);
 
     //Calcule des ingredients et affichage un par un
     for (int i = 0; i <= NBR_D_INGREDIENTS - 1; i++){
@@ -89,7 +83,7 @@ void calculs(int recetteChoisie, int nbrPersonnes){
             affichage(i, qteIngredient);
         }
     }
-    printf("\n\nBonne dégustation !");
+    printf("\n\nBonne dégustation.. !");
 }
 
 /**
@@ -100,7 +94,7 @@ void calculs(int recetteChoisie, int nbrPersonnes){
 int choix(){
     int recetteChoisie;
     do {
-        //Vider la console
+
         system("cls");
 
         //Demande de la recette
@@ -129,12 +123,16 @@ int NombreDePersonnes(int recetteChoisie){
     switch(recetteChoisie){
         case 1: printf("\nEntrez le nombre de personnes qui mangeront des crêpes classsiques :");
                 break;
+
         case 2: printf("\nEntrez le nombre de personnes qui mangeront des crêpes à la bière :");
                 break;
+
         case 3: printf("\nEntrez le nombre de personnes qui mangeront des crêpes légères :");
                 break;
+
         case 4: printf("\nEntrez le nombre de personnes qui mangeront des gauffres :");
                 break;
+
         case 5: printf("\nEntrez le nombre de personnes qui mangeront des pancakes :");
                 break;
     }
