@@ -90,7 +90,9 @@ void calculs(int recetteChoisie, int nbrPersonnes){
  * \author Yann Fanha
  * \date 25.02.2020
  * \description Demande le nombre de personne qui mangeront la recette choisie
-*/
+ * @param recetteChoisie
+ * @return nbrPersonnes
+ */
 int NombreDePersonnes(int recetteChoisie){
     int nbrPersonnes;
 
@@ -145,6 +147,7 @@ void affichageDuChoix(int recetteChoisie){
  * \author Yann Fanha
  * \date 25.02.2020
  * \description Affiche la liste des recettes possible et demande a l'utilisateur laquel il veut faire
+ * @return recetteChoisie
 */
 int choix(){
     int recetteChoisie;
