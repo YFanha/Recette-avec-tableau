@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c44dea3-64a2-4130-b336-2c4cf4653edc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RecetteTableau.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RecetteTableau.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-    </list>
+    <list default="true" id="0c44dea3-64a2-4130-b336-2c4cf4653edc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +79,7 @@
       <workItem from="1582816206453" duration="1275000" />
       <workItem from="1582819065157" duration="22000" />
       <workItem from="1582878189667" duration="373000" />
+      <workItem from="1582897827793" duration="9000" />
     </task>
     <servers />
   </component>
